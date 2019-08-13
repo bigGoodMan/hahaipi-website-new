@@ -1,0 +1,277 @@
+
+// banner
+.index-banner
+  height pxs(960)
+  background url('./img/index-banner.png') no-repeat top center
+// 公用
+.index-common-title
+  padding pxs(70) 0 pxs(56)
+  .index-border
+    // width: calc((100% - 120px) / 2)
+    flex-shrink 1
+    img
+      max-width 100%
+.index-form
+  .index-input-list
+    width pxs(300)
+    height pxs(71)
+    box-sizing border-box
+    padding-left pxs(26)
+    border-radius pxs(5)
+    border 1px solid #f33763
+    box-shadow 0 0 pxs(12) 0 rgba(243, 55, 99, 0.6)
+    &.index-input-phone
+      margin-left pxs(52)
+    .index-input-content
+      min-width 0
+      border none
+      outline none
+  .index-input-button
+    width pxs(200)
+    height pxs(71)
+    .index-button-content
+      width pxs(200)
+      user-select none
+      height pxs(71)
+      line-height pxs(71)
+      border-radius pxs(5)
+      cursor pointer
+      background-image linear-gradient(140deg, #ff5555, #ec266a)
+// banner
+.index-banner
+  position relative
+  .index-receive
+    padding-bottom pxs(118)
+  .index-contact
+    padding-bottom pxs(159)
+  .index-button-know
+    width pxs(200)
+    user-select none
+    height pxs(71)
+    line-height pxs(71)
+    border-radius pxs(5)
+    cursor pointer
+    border pxs(3) solid #ffffff
+  .index-bottom
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    padding 0 40px
+    width 100%
+    box-sizing: border-box
+    .index-list
+      width pxs(550)
+      height pxs(118)
+      background-color rgba(255, 255, 255, 0.3)
+// 洞见云介绍
+.index-introduce
+  height pxs(943)
+  .index-info
+    padding-top pxs(121)
+  .index-title
+    margin pxs(36) 0
+  .index-article
+    line-height pxs(40)
+  .index-right-content
+    width pxs(900)
+  .index-column
+    margin-top pxs(145)
+  .index-list
+    width pxs(290)
+    height pxs(342)
+    box-sizing border-box
+    transition all 0.3s ease-in-out
+    .index-list-container
+      border 1px solid #dcdcdc
+      border-top none
+      padding-top pxs(40)
+      transition all 0.3s ease-in-out
+      .index-introduce-icon
+        width pxs(63)
+        height pxs(62)
+        // transition all 0.3s ease-in-out
+        background url('./img/introduce-icon.png') no-repeat
+        background-size: pxs(304)
+      .index-shop
+        background-position pxs(-11) pxs(-7)
+      .index-light
+        background-position pxs(-11) pxs(-197)
+      .index-brand
+        background-position pxs(-11) pxs(-394)
+      .index-money
+        background-position pxs(-11) pxs(-593)
+    .index-list-top-block
+      height pxs(9)
+      background-color #1f2325
+      transition all 0.3s ease-in-out
+    &:hover
+      box-shadow 0 0 14.08px 1.92px rgba(69, 67, 65, 0.3)
+      .index-list-container
+        border 1px solid #f43862
+        border-top none
+        .index-shop
+          background-position pxs(-218) pxs(-7)
+        .index-light
+          background-position pxs(-218) pxs(-197)
+        .index-brand
+          background-position pxs(-218) pxs(-394)
+        .index-money
+          background-position pxs(-218) pxs(-593)
+      .index-list-top-block
+        background-color #f43862
+// 嗨皮创业
+.index-entrepreneurship
+  .index-img-banner
+    font-size pxs(38)
+    background url('./img/venture-service.png') no-repeat center
+    height pxs(430)
+  .index-title
+    margin pxs(53) 0 0 0
+  .index-column
+    margin-top pxs(147)
+  .index-list
+    width pxs(290)
+    h5
+      margin-bottom pxs(15)
+// 其它疑问
+.index-other-questions
+  background url('./img/ohter-question.png') no-repeat center
+  height pxs(565)
+  .index-title
+    padding-top pxs(98)
+  .index-describe
+    padding-top pxs(50)
+  .index-tip
+    margin pxs(105) 0 0 0
+// 洞见云+嗨皮商家
+.index-djyun-haipi
+  margin-top pxs(93)
+  background-color #fafafa
+  .index-img
+    padding-bottom pxs(200)
+// 软件下载
+.index-software-download
+  background url('./img/software-download-banner.png') no-repeat center
+  height pxs(498)
+  .index-icon
+    width pxs(870)
+    margin 0 auto
+    .index-list
+      position relative
+      width pxs(145)
+      height pxs(189)
+      .index-list-container
+        position absolute
+        left 0
+        right 0
+        width 100%
+        .index-icon-container
+          position relative
+          width pxs(144)
+          height @width
+          img
+            position absolute
+            bottom 0
+            left 50%
+            transform translate(-50%, 0)
+  .index-icon-bottom-container
+    margin-top pxs(60)
+    img
+      width: pxs(415)
+// 成功案例
+.index-success-case
+  padding-bottom pxs(47)
+  .index-list
+    width pxs(380)
+    img
+      max-width 100%
+// 免费试用
+.index-free-trial
+  height pxs(436)
+  .index-title
+    padding-top pxs(95)
+.index-swiper-case
+  height 480px
+  .swiper-container
+    width 100%
+    height 100%
+    .swiper-slide
+      position relative
+      .index-img-case
+        position absolute
+        top 0
+        left 0
+        bottom 0
+        right 0
+        margin auto
+      .index-swiper-case-info
+        position relative
+        z-index 9
+    .index-info
+      width pxs(400)
+.index
+  .index-width-686
+    width pxs(686)
+  .index-width-550
+    width pxs(550)
+  .index-width-370
+    width pxs(370)
+  .index-width-300
+    width pxs(300)
+  .index-width-210
+    width pxs(210)
+  .index-width-184
+    width pxs(184)
+  .index-width-143
+    width pxs(143)
+  .index-width-1200
+    width pxs(1200)
+  .index-width-1289
+    width pxs(1289)
+  .index-height
+    height pxs(533)
+  .index-padding-left-15
+    padding-left pxs(15)
+  .index-padding-left-13
+    padding-left pxs(13)
+  .index-padding-bottom-15
+    padding-bottom: pxs(15)
+  .index-padding-bottom-55
+    padding-bottom: pxs(55)
+  .index-padding-bottom-75
+    padding-bottom pxs(75)
+  .index-padding-top-10
+    padding-top pxs(10)
+  .index-padding-top-35
+    padding-top pxs(35)
+  .index-padding-top-40
+    padding-top pxs(40)
+  .index-padding-top-23
+    padding-top pxs(23)
+  .index-padding-top-73
+    padding-top pxs(73)
+  .index-padding-top-57
+    padding-top pxs(57)
+  .index-padding-top-18
+    padding-top pxs(18)
+  .index-padding-0-20
+    padding 0 pxs(20)
+  .index-padding-17-0
+    padding pxs(17) 0
+  .index-margin-bottom-16
+    margin-bottom: pxs(16)
+  .index-margin-bottom-33
+    margin-bottom: pxs(33)
+  .index-margin-left-49
+    margin-left: pxs(49)
+  .index-margin-left-60
+    margin-left: pxs(60)
+  .index-margin-top-80
+    margin-top: pxs(80)
+  .index-margin-top-50
+    margin-top: pxs(50)
+  .index-margin-top-44
+    margin-top: pxs(44)
+  .index-margin-right-55
+    margin-right: pxs(55)
