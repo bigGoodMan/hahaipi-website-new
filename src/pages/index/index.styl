@@ -1,7 +1,9 @@
 
 // banner
 .index-banner
-  height pxs(960)
+  height pxs(811)
+  padding pxs(138) 0 pxs(39)
+  box-sizing border-box
   background url('./img/index-banner.png') no-repeat top center
 // 公用
 .index-common-title
@@ -11,6 +13,46 @@
     flex-shrink 1
     img
       max-width 100%
+.index-form-new
+  margin 0
+  dd
+    margin 0
+  .index-input-button
+    width pxs(200)
+    height pxs(70)
+    .index-button-content
+      width 100%
+      user-select none
+      height 100%
+      line-height pxs(71)
+      border-radius pxs(5)
+      cursor pointer
+      background-image linear-gradient(140deg, #ff5555, #ec266a)
+  .index-form-content
+    background-color #ffffff
+    border-radius pxs(5)
+    position absolute
+    top 0
+    left pxs(-10)
+    width pxs(452)
+    height pxs(70)
+    padding pxs(16) 0 pxs(16) pxs(35)
+    box-sizing border-box
+    .index-input-rod
+      margin 0 pxs(12)
+      width 1px
+      height 100%
+    .index-input-list
+      .index-input-content
+        border none
+        width 100%
+        user-select none
+        outline none
+        color #c96983
+      &.index-input-name
+        width pxs(80)
+      &.index-input-phone
+        width pxs(155)
 .index-form
   .index-input-list
     width pxs(300)
@@ -52,21 +94,13 @@
     border-radius pxs(5)
     cursor pointer
     border pxs(3) solid #ffffff
-  .index-bottom
-    position absolute
-    bottom 0
-    left 0
-    right 0
-    padding 0 40px
-    width 100%
-    box-sizing: border-box
-    .index-list
-      width pxs(550)
-      height pxs(118)
-      background-color rgba(255, 255, 255, 0.3)
+// 简介
+.index-brief-intro
+  height pxs(172)
+  box-sizing border-box
 // 洞见云介绍
 .index-introduce
-  height pxs(943)
+  padding-bottom pxs(175)
   .index-info
     padding-top pxs(121)
   .index-title
@@ -76,68 +110,61 @@
   .index-right-content
     width pxs(900)
   .index-column
-    margin-top pxs(145)
+    margin-top pxs(115)
   .index-list
-    width pxs(290)
-    height pxs(342)
+    width pxs(288)
+    height pxs(405)
     box-sizing border-box
-    transition all 0.3s ease-in-out
     .index-list-container
-      border 1px solid #dcdcdc
-      border-top none
-      padding-top pxs(40)
+      border 3px solid #f5b3c5
+      padding-top pxs(32)
+      border-radius pxs(10)
       transition all 0.3s ease-in-out
       .index-introduce-icon
-        width pxs(63)
-        height pxs(62)
+        width pxs(130)
+        height pxs(130)
         // transition all 0.3s ease-in-out
-        background url('./img/introduce-icon.png') no-repeat
-        background-size: pxs(304)
       .index-shop
-        background-position pxs(-11) pxs(-7)
+        background url('./img/index-shop.png') no-repeat
       .index-light
-        background-position pxs(-11) pxs(-197)
+        background url('./img/index-light.png') no-repeat
       .index-brand
-        background-position pxs(-11) pxs(-394)
+        background url('./img/index-brand.png') no-repeat
       .index-money
-        background-position pxs(-11) pxs(-593)
-    .index-list-top-block
-      height pxs(9)
-      background-color #1f2325
-      transition all 0.3s ease-in-out
-    &:hover
-      box-shadow 0 0 14.08px 1.92px rgba(69, 67, 65, 0.3)
-      .index-list-container
-        border 1px solid #f43862
-        border-top none
-        .index-shop
-          background-position pxs(-218) pxs(-7)
-        .index-light
-          background-position pxs(-218) pxs(-197)
-        .index-brand
-          background-position pxs(-218) pxs(-394)
-        .index-money
-          background-position pxs(-218) pxs(-593)
-      .index-list-top-block
-        background-color #f43862
-// 嗨皮创业
+        background url('./img/index-money.png') no-repeat
+// 嗨皮创业服务
 .index-entrepreneurship
-  .index-img-banner
-    font-size pxs(38)
-    background url('./img/venture-service.png') no-repeat center
-    height pxs(430)
-  .index-title
-    margin pxs(53) 0 0 0
-  .index-column
-    margin-top pxs(147)
-  .index-list
-    width pxs(290)
-    h5
-      margin-bottom pxs(15)
+  padding-bottom pxs(60)
+  .index-entrepreneurship-banner
+    width 100%
+    height pxs(460)
+    background url('./img/index-sevice-banner.png') no-repeat center
+  .index-entrepreneurship-ul
+    margin-top pxs(64)
+    .index-entrepreneurship-list
+      width pxs(620)
+      // height pxs(660)
+      padding pxs(115) pxs(50) pxs(80)
+      box-sizing border-box
+      box-shadow 0 0 3px 0px rgba(0, 0, 0, 0.15)
+      .index-entrepreneurship-icon
+        padding pxs(105) 0 pxs(120)
+  .index-entrepreneurship-second-ul
+    margin-top pxs(44)
+    box-shadow 0 0 3px 0px rgba(0, 0, 0, 0.15)
+    .index-entrepreneurship-list
+      width 50%
+      padding pxs(65) pxs(10) pxs(52)
+      box-sizing border-box
+    .index-entrepreneurship-icon
+      padding pxs(56) 0 pxs(58)
 // 其它疑问
 .index-other-questions
-  background url('./img/ohter-question.png') no-repeat center
-  height pxs(565)
+  background url('./img/index-background-bear.png') no-repeat center
+  height pxs(682)
+  padding pxs(35) 0
+  box-sizing border-box
+  background-color #f0d2d7
   .index-title
     padding-top pxs(98)
   .index-describe
@@ -146,14 +173,21 @@
     margin pxs(105) 0 0 0
 // 洞见云+嗨皮商家
 .index-djyun-haipi
-  margin-top pxs(93)
-  background-color #fafafa
-  .index-img
-    padding-bottom pxs(200)
+  padding pxs(68) 0 pxs(135)
+  background-color #ffffff
+  .index-djyun-haipi-ul
+    width pxs(1400)
+    margin pxs(77) auto 0
+    .index-djyun-haipi-list
+      box-shadow 0 0 3px 0px rgba(0, 0, 0, 0.15)
+      padding pxs(59) 0 pxs(83)
+      margin-bottom pxs(15)
+      .index-djyun-haipi-content
+        width pxs(492)
 // 软件下载
 .index-software-download
-  background url('./img/software-download-banner.png') no-repeat center
-  height pxs(498)
+  background url('./img/index-scan-banner.png') no-repeat center
+  height pxs(550)
   .index-icon
     width pxs(870)
     margin 0 auto
@@ -178,7 +212,7 @@
   .index-icon-bottom-container
     margin-top pxs(60)
     img
-      width: pxs(415)
+      width pxs(415)
 // 成功案例
 .index-success-case
   padding-bottom pxs(47)
@@ -211,6 +245,8 @@
     .index-info
       width pxs(400)
 .index
+  .index-width-110
+    width pxs(110)
   .index-width-686
     width pxs(686)
   .index-width-550
@@ -236,9 +272,9 @@
   .index-padding-left-13
     padding-left pxs(13)
   .index-padding-bottom-15
-    padding-bottom: pxs(15)
+    padding-bottom pxs(15)
   .index-padding-bottom-55
-    padding-bottom: pxs(55)
+    padding-bottom pxs(55)
   .index-padding-bottom-75
     padding-bottom pxs(75)
   .index-padding-top-10
@@ -259,19 +295,23 @@
     padding 0 pxs(20)
   .index-padding-17-0
     padding pxs(17) 0
-  .index-margin-bottom-16
-    margin-bottom: pxs(16)
+  .index-margin-bottom-13
+    margin-bottom pxs(13)
   .index-margin-bottom-33
-    margin-bottom: pxs(33)
+    margin-bottom pxs(33)
+  .index-margin-left-30
+    margin-left pxs(30)
   .index-margin-left-49
-    margin-left: pxs(49)
+    margin-left pxs(49)
+  .index-margin-left-50
+    margin-left pxs(50)
   .index-margin-left-60
-    margin-left: pxs(60)
+    margin-left pxs(60)
   .index-margin-top-80
-    margin-top: pxs(80)
+    margin-top pxs(80)
   .index-margin-top-50
-    margin-top: pxs(50)
+    margin-top pxs(50)
   .index-margin-top-44
-    margin-top: pxs(44)
+    margin-top pxs(44)
   .index-margin-right-55
-    margin-right: pxs(55)
+    margin-right pxs(55)

@@ -26,11 +26,6 @@ $(function () {
     //   el: '.swiper-pagination'
     // }
   })
-  // 显示联系
-  $('#contact-us-btn').click(function () {
-    $(this).fadeOut()
-    $('#contact-us-form').fadeIn()
-  })
   // 显示二维码
   $('.show-code-hover').hover(function () {
     let jqDomArr = $(this).find('.index-icon-container')
@@ -52,6 +47,10 @@ $(function () {
   //   el: '.swiper-scrollbar'
   // }
   $('.input-button').click(function () {
+    if (this.id === 'contact-us-btn' && $('#contact-us-form').is(':hidden')) {
+      $('#contact-us-form').fadeIn()
+      return
+    }
     let form = $(this).attr('data-form')
     let name = $(`.form-input[data-type="name"][data-form="${form}"]`)
     let phone = $(`.form-input[data-type="mobile_phone"][data-form="${form}"]`)
