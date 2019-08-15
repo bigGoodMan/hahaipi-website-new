@@ -2,7 +2,10 @@
 .haipi-phone-down
   width 100vw
   height 100vh
-  background url('../../assets/img/haipi-phone-down-background.png') no-repeat center
+  &.haipi-b-background
+    background url('../../assets/img/haipi-b-background.png') center no-repeat /cover
+  &.haipi-c-background
+    background url('../../assets/img/haipi-c-background.png') center no-repeat /cover
   .haipi-phone-down-container
     padding rems(263) rems(109) 0
     img
@@ -20,7 +23,7 @@
     width 100vw
     height 100vh
     box-sizing border-box
-    padding rems(40) rems(54) 0 rems(190)
+    padding 0 rems(20)
     background-color rgba(0, 0, 0, 0.6)
     z-index 9
     display none

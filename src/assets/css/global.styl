@@ -20,19 +20,24 @@ html, body
     user-select none
 .footer
   .footer-container
-    height 229px
-    .footer-container-left
+    .footer-bar
+      width 1px
+      height 100%
+      margin 0 50px
+      background-color #525457
+    .footer-container-right
+      width 45%
+      height pxs(380)
       .footer-icon
         width 80px
         height 80px
+        border-radius: pxs(16)
+        box-shadow 0 0 3px 0px rgba(0, 0, 0, 0.25)
         img
           max-width 100%
-  .footer-bar
-    width 1px
-    height 100%
-    margin 0 50px
-    background-color #525457
-  .footer-container-right
-    width 542px
   .footer-bottom
     padding 13px 0
+    .footer-bottom-content
+      margin: 0
+      border-top 1px solid #c9c9c9
+      padding pxs(17) 0 pxs(30)

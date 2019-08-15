@@ -140,15 +140,23 @@
     height pxs(460)
     background url('./img/index-sevice-banner.png') no-repeat center
   .index-entrepreneurship-ul
-    margin-top pxs(64)
+    margin-top pxs(34)
     .index-entrepreneurship-list
       width pxs(620)
       // height pxs(660)
-      padding pxs(115) pxs(50) pxs(80)
+      padding pxs(80) pxs(50)
       box-sizing border-box
-      box-shadow 0 0 3px 0px rgba(0, 0, 0, 0.15)
+      box-shadow 0 0 12px 0px rgba(0, 0, 0, 0.15)
       .index-entrepreneurship-icon
-        padding pxs(105) 0 pxs(120)
+        height pxs(250)
+        background-repeat no-repeat
+        background-position center
+        &.index-choice-address
+          background-image: url(./img/index-choice-address.png)
+        &.index-train
+          background-image: url(./img/index-train.png)
+        &.index-gift
+          background-image: url(./img/index-gift.png)
   .index-entrepreneurship-second-ul
     margin-top pxs(44)
     box-shadow 0 0 3px 0px rgba(0, 0, 0, 0.15)
@@ -179,11 +187,13 @@
     width pxs(1400)
     margin pxs(77) auto 0
     .index-djyun-haipi-list
-      box-shadow 0 0 3px 0px rgba(0, 0, 0, 0.15)
-      padding pxs(59) 0 pxs(83)
       margin-bottom pxs(15)
       .index-djyun-haipi-content
-        width pxs(492)
+        box-shadow 0 0 3px 0px rgba(0, 0, 0, 0.15)
+        padding 0 pxs(45)
+        width 49.8%
+        height pxs(312)
+        box-sizing border-box
 // 软件下载
 .index-software-download
   background url('./img/index-scan-banner.png') no-repeat center
@@ -213,18 +223,46 @@
     margin-top pxs(60)
     img
       width pxs(415)
+.index-service-center
+  background-color #f2f2f2
+  padding pxs(60) 0
+  .index-service-center-container
+    &:first-of-type
+      margin-top pxs(70)
+      padding-bottom pxs(20)
+    &:nth-of-type(2n-1)
+      background-color #f2f2f2
+    &:nth-of-type(2n)
+      background-color #ffffff
+    .index-service-center-ul
+      width pxs(1387)
+      margin 0 auto
+      &.index-service-center-ul-height
+        height pxs(250)
+      .index-service-center-list
+        width 25%
+        span
+          margin-top pxs(10)
+          &:first-child
+            margin-top 0
 // 成功案例
 .index-success-case
-  padding-bottom pxs(47)
+  padding pxs(60) 0
+  border-top 1px solid #dddddd
+  background-color #f8f8f8
   .index-list
     width pxs(380)
     img
       max-width 100%
+    .index-success-case-info
+      padding 0 pxs(10) pxs(30)
+      background-color #ffffff
 // 免费试用
 .index-free-trial
-  height pxs(436)
+  background #f8f8f8 url('./img/index-free-background.png') no-repeat top center
+  height pxs(532)
   .index-title
-    padding-top pxs(95)
+    padding-top pxs(196)
 .index-swiper-case
   height 480px
   .swiper-container
@@ -245,10 +283,14 @@
     .index-info
       width pxs(400)
 .index
+  .index-width-80
+    width pxs(80)
   .index-width-110
     width pxs(110)
   .index-width-686
     width pxs(686)
+  .index-width-505
+    width pxs(505)
   .index-width-550
     width pxs(550)
   .index-width-370
