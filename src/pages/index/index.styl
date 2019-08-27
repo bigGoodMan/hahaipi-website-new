@@ -55,8 +55,8 @@
         width pxs(155)
 .index-form
   .index-input-list
-    width pxs(300)
-    height pxs(71)
+    width pxs(250)
+    height pxs(55)
     box-sizing border-box
     padding-left pxs(26)
     border-radius pxs(5)
@@ -69,13 +69,13 @@
       border none
       outline none
   .index-input-button
-    width pxs(200)
-    height pxs(71)
+    // width pxs(200)
+    // height pxs(71)
     .index-button-content
-      width pxs(200)
+      width pxs(170)
       user-select none
-      height pxs(71)
-      line-height pxs(71)
+      height pxs(60)
+      line-height pxs(60)
       border-radius pxs(5)
       cursor pointer
       background-image linear-gradient(140deg, #5174f5, #40a5f6)
@@ -97,26 +97,26 @@
   height pxs(118)
   box-sizing border-box
   .index-list
-    width: 33.3333334%
+    width 33.3333334%
 // 洞见云介绍
 .index-introduce
   padding-bottom pxs(80)
   .index-info
-    padding-top pxs(90)
+    padding 60px 10px 0
   .index-title
     margin 0 0 pxs(55) 0
     height pxs(90)
     img
-      max-height: 100%
+      max-height 100%
   .index-article
     line-height pxs(40)
-  .index-right-content
-    width pxs(900)
+  // .index-right-content
+  // width pxs(900)
   .index-column
-    margin-top pxs(80)
+    margin-top pxs(56)
   .index-list
     width pxs(255)
-    height pxs(388)
+    height pxs(365)
     box-sizing border-box
     .index-list-container
       border 3px solid #78a5fb
@@ -155,9 +155,9 @@
         background-repeat no-repeat
         background-position center
         &.index-choice-address
-          background-image: url(./img/index-choice-address.png)
+          background-image url('./img/index-choice-address.png')
         &.index-train
-          background-image: url(./img/index-train.png)
+          background-image url('./img/index-train.png')
   .index-entrepreneurship-second-ul
     margin-top pxs(30)
     height pxs(475)
@@ -171,7 +171,7 @@
       background-repeat no-repeat
       background-position center
       &.index-gift
-        background-image: url(./img/index-gift.png)
+        background-image url('./img/index-gift.png')
 // 其它疑问
 .index-other-questions
   background url('./img/index-background-bear.png') no-repeat center / cover
@@ -239,7 +239,7 @@
     &:nth-of-type(2n)
       background-color #ffffff
     .index-service-center-ul
-      width pxs(1387)
+      width pxs(1100)
       margin 0 auto
       &.index-service-center-ul-height
         height pxs(220)
@@ -266,7 +266,7 @@
   background #f8f8f8 url('./img/index-free-background.png') no-repeat top center / cover
   height pxs(472)
   .index-title
-    padding-top pxs(120)
+    padding-top pxs(165)
 .index-swiper-case
   height 480px
   .swiper-container
@@ -367,15 +367,20 @@
     margin-top pxs(44)
   .index-margin-right-55
     margin-right pxs(55)
+  .index-border
+    border 2px solid #5480d5
+    border-radius 7px
+    padding 5px 10px
+    box-shadow 0 0 10px 0 rgba(93, 137, 235, 1), 0 0 10px 0 rgba(93, 137, 235, 1) inset
   .index-hover-code
-    font-size: 0
+    font-size 0
     .index-hover-code-show
-      position: absolute
-      bottom: 0
+      position absolute
+      bottom 0
       left 0
-      height: 0
+      height 0
       opacity 0
-      transition all .3s
+      transition all 0.3s
       overflow hidden
       img
         max-width 100%

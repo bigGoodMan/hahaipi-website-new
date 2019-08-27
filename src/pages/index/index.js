@@ -10,8 +10,10 @@ $(function () {
     clickClsEle: '.index-anchor-point-click',
     controlClsEle: '.index-menu-block',
     scrollTop: 72,
-    callback (obj) {
-    }
+    controlDone (obj) {
+    },
+    lazyEle: '.test-src',
+    lazyType: 'data-src'
   })
   // 轮播操作
   new Swiper('.swiper-container', {
