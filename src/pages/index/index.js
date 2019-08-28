@@ -19,9 +19,12 @@ $(function () {
   // 轮播操作
   new Swiper('.swiper-container', {
     // direction: 'vertical', // 垂直切换选项
-    autoplay: {
-      delay: 3000 // 3秒切换一次
+    pagination: {
+      el: '.swiper-pagination'
     },
+    // autoplay: {
+    //   delay: 3000 // 3秒切换一次
+    // },
     loop: true, // 循环模式选项
     disableOnInteraction: false
     // 如果需要分页器

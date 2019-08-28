@@ -322,11 +322,11 @@
       <div class="index-menu-block index-software-download flex-row flex-center index-lazy-img" data-sign="software-download" data-src="./img/index-scan-banner.png">
         <div class="width-pxs-1200 margin-lr-auto">
           <div class="index-icon">
-            <ul class="no-ul flex-row flex-between-center" style="margin-left: 230px;">
+            <ul class="no-ul flex-row flex-between-center" style="margin-left: 450px;">
               <li class="index-list">
                 <div class="index-list-container show-code-hover cursor-select-none">
                   <div class="size-0 index-icon-container">
-                    <img class="index-width-110" src="./img/haipi-merchant-logo.png">
+                    <img style="max-width: 88px" src="./img/haipi-merchant-logo.png">
                   </div>
                   <div class="size-0 index-icon-container" style="display: none;">
                     <img class="index-width-150" src="./img/haipi-merchant-code.png">
@@ -337,7 +337,7 @@
               <li class="index-list">
                 <div class="index-list-container show-code-hover cursor-select-none">
                   <div class="size-0 index-icon-container">
-                    <img class="index-width-110" src="./img/hahaipi-app-logo.png">
+                    <img style="max-width: 88px" src="./img/hahaipi-app-logo.png">
                   </div>
                   <div class="size-0 index-icon-container" style="display: none;">
                     <img class="index-width-150" src="./img/haipi-code.png">
@@ -349,7 +349,7 @@
                 <div class="index-list-container cursor-select-none"
                   onclick="window.location.href='https://yun.i3020.com/'">
                   <div class="size-0 index-icon-container">
-                    <img class="index-width-110" src="./img/djyun-web-logo.png">
+                    <img style="max-width: 88px" src="./img/djyun-web-logo.png">
                   </div>
                   <p class="margin-0 text-center color-f size-18 index-padding-top-18">洞见云 PC</p>
                 </div>
@@ -552,30 +552,35 @@
           </div>
       </div>
       <!-- 免费试用 -->
-      <div class="index-menu-block bg-color-e3 index-free-trial index-lazy-img" data-sign="free-trial" data-src="./img/index-free-background.png">
-        <div class="margin-lr-auto width-pxs-1200">
-          <h5 class="index-title margin-0 color-f size-24 text-center">获取14天-免费试用</h5>
-          <div class="flex-row flex-center index-margin-top-66">
-            <ul class="no-ul flex-row index-form flex-start-center">
-              <li class="index-input-list bg-color-f flex-row flex-between-center">
-                <span class="size-20 color-a">姓名：</span>
-                <input class="index-input-content flex-1 size-24 color-30 form-input" data-name="姓名" data-type="name"
-                  data-form="2">
-              </li>
-              <li class="index-input-list index-input-phone bg-color-f flex-row flex-between-center">
-                <span class="size-20 color-a">手机：</span>
-                <input class="index-input-content flex-1 size-24 color-30 form-input" data-name="手机"
-                  data-type="mobile_phone" data-form="2">
-              </li>
-              <li class="index-input-button index-margin-left-60">
-                <div class="index-button-content text-center size-24 color-f input-button" data-form="2">免费试用</div>
-              </li>
-            </ul>
+      <div class="index-menu-block bg-color-e3 index-free-trial index-lazy-img flex-row flex-center-stretch" data-sign="free-trial" data-src="./img/index-free-background.png">
+        <div class="margin-lr-auto width-pxs-1200 relative flex-column flex-center">
+          <div class="index-free-bear">
+            <img data-src="./img/index-free-bear.png" class="index-lazy-img">
           </div>
-          <p class="size-16 color-e9 margin-0 index-margin-top-44 text-center">
-            <span class="index-margin-right-55">我们严格遵守用户保密条款，维护用户资料安全</span>
-            <span>创业热线：+8600000000 service@i3020.com</span>
-          </p>
+          <div class="relative zindex-1">
+            <h5 class="index-title margin-0 color-f size-24 text-center">获取14天-免费试用</h5>
+            <div class="flex-row flex-center" style="margin-top: 40px;">
+              <ul class="no-ul flex-row index-form flex-start-center">
+                <li class="index-input-list bg-color-f flex-row flex-between-center">
+                  <span class="size-20 color-a">姓名：</span>
+                  <input class="index-input-content flex-1 size-24 color-30 form-input" data-name="姓名" data-type="name"
+                    data-form="2">
+                </li>
+                <li class="index-input-list index-input-phone bg-color-f flex-row flex-between-center">
+                  <span class="size-20 color-a">手机：</span>
+                  <input class="index-input-content flex-1 size-24 color-30 form-input" data-name="手机"
+                    data-type="mobile_phone" data-form="2">
+                </li>
+                <li class="index-input-button index-margin-left-60">
+                  <div class="index-button-content text-center size-24 color-f input-button" data-form="2">免费试用</div>
+                </li>
+              </ul>
+            </div>
+            <p class="size-16 color-e9 margin-0 index-margin-top-44 text-center">
+              <span class="index-margin-right-55">我们严格遵守用户保密条款，维护用户资料安全</span>
+              <span>创业热线：+8600000000 service@i3020.com</span>
+            </p>
+          </div>
         </div>
       </div>
       <div class="index-menu-block index-swiper-case" data-sign="success-case">
@@ -595,18 +600,16 @@
                 </div>
               </div> -->
             <div class="swiper-slide">
-              <div class="index-img-case">
-                <img src="./img/swiper-case-1.png">
+              <div class="index-img-case index-lazy-img" data-src="./img/swiper-case-2.png">
+                <!-- <img > -->
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="index-img-case">
-                <img src="./img/swiper-case-3.png">
+              <div class="index-img-case index-lazy-img" data-src="./img/swiper-case-2.png">
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="index-img-case">
-                <img src="./img/swiper-case-4.png">
+              <div class="index-img-case index-lazy-img" data-src="./img/swiper-case-2.png">
               </div>
             </div>
           </div>
@@ -625,7 +628,7 @@
     <footer class="footer bg-color-f2">
       <div class="flex-row flex-between-stretch padding-40-0 footer-container margin-lr-auto width-pxs-1200">
         <div class="footer-container-left flex-1" style="align-self: stretch">
-        <img src="./img/index-machine.png">
+        <img data-src="./img/index-machine.png" class="index-lazy-img">
         </div>
         <div class="footer-bar"></div>
         <div class="flex-row flex-start-stretch size-16 color-6 footer-container-right">
