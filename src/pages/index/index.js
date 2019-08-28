@@ -9,7 +9,7 @@ $(function () {
   new ChangeScroll({
     clickClsEle: '.index-anchor-point-click',
     controlClsEle: '.index-menu-block',
-    scrollTop: 72,
+    scrollTop: 71,
     controlDone (obj) {
     },
     lazyEle: '.index-lazy-img',
