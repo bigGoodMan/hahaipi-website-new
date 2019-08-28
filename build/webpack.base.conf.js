@@ -4,7 +4,7 @@ const glob = require('glob')
 // 消除冗余的css
 const PurifycssWebpack = require('purifycss-webpack')
 // const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin') // 很重要的插件生成多页面入口
 const rules = require('./rules.js')
 console.log(path.resolve())
 console.log(path.join())

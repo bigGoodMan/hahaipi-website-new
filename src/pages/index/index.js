@@ -12,8 +12,9 @@ $(function () {
     scrollTop: 72,
     controlDone (obj) {
     },
-    lazyEle: '.test-src',
-    lazyType: 'data-src'
+    lazyEle: '.index-lazy-img',
+    lazyType: 'data-src',
+    lazyOffset: 400
   })
   // 轮播操作
   new Swiper('.swiper-container', {

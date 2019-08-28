@@ -38,6 +38,7 @@ module.exports = [
         // root: path.resolve(__dirname, 'src'),
 
         // attrs: ['img:src']
+        attrs: ['img:src', ':data-src']
 
       }
     }

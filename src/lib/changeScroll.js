@@ -80,12 +80,13 @@ class ChangeScroll {
       if (exit) {
         continue
       }
-      let top = getParentsOffsetTop(ele, idEle)
+      let offsetTop = getParentsOffsetTop(ele, idEle)
+      let offsetHeight = ele.offsetHeight
       // dom是否在可视区范围内
-      console.log(top, scrollTop, scrollTop + clientHeight)
-      if (scrollTop + clientHeight + lazyOffset >= top && top >= scrollTop - lazyOffset) {
+      // console.log(offsetTop, scrollTop, scrollTop + clientHeight)
+      if (offsetTop + offsetHeight + lazyOffset >= scrollTop && scrollTop + clientHeight >= offsetTop - lazyOffset) {
         if (lazyDone) { // 是否有回调方法
-          lazyDone({ ele, top })
+          lazyDone({ ele, offsetTop })
           continue
         }
         let src = ele.getAttribute(lazyType)
