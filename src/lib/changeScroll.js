@@ -1,5 +1,5 @@
 import { eventThrottle, getParentsOffsetTop, getWebType } from './tools'
-import Animate from './animate'
+import { Animate } from './animate'
 class ChangeScroll {
   /**
    * @param {*} idEle 滚动的dom
@@ -36,7 +36,8 @@ class ChangeScroll {
       idEle
     } = this
     let animate = new Animate()
-    document.querySelectorAll(clickClsEle).forEach(ele => {
+    for (let i = 0; i < document.querySelectorAll(clickClsEle).length; ++i) {
+      let ele = document.querySelectorAll(clickClsEle)[i]
       let sign = ele.getAttribute('data-sign')
       let clickEle = ele
       let controlEle = document.querySelector(`${controlClsEle}[data-sign="${sign}"]`)
@@ -66,7 +67,7 @@ class ChangeScroll {
         clickEle,
         controlEle
       })
-    })
+    }
   }
   scrollDeal (e) {
     const { lazyEle, lazyOffset, idEle, lazyType, lazyDone } = this
@@ -98,11 +99,12 @@ class ChangeScroll {
         ele.setAttribute('data-exit', true)
       }
     }
-    document.querySelectorAll(lazyEle).forEach(ele => {
+    for (let i = 0; i < document.querySelectorAll(lazyEle).length; i++) {
+      let ele = document.querySelectorAll(lazyEle)[i]
       let top = getParentsOffsetTop(ele, idEle)
       if (top - 2 * lazyOffset + clientHeight >= scrollTop && top - lazyOffset <= scrollTop) {
       }
-    })
+    }
     this.clickClsEleArr.some(v => {
       let top = getParentsOffsetTop(v.controlEle, this.idEle)
       let height = v.controlEle.offsetHeight

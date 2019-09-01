@@ -20,4 +20,4 @@ function ajax ({ method = 'post', url, data, dataType = 'json', async = true }) 
     })
   }
 })
-export default ajax
+export { ajax }

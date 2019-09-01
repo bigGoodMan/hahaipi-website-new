@@ -41,6 +41,7 @@ const webpackConfigProd = {
       uglifyOptions: {
         // display warnings when dropping unreachable code or unused declarations etc.
         warnings: false,
+        ie8: true,
         compress: {
           drop_debugger: false // (default: true) -- remove debugger; statements
           // -- Pass true to discard calls to console.* functions. If you wish to drop a specific function call such as console.info and/or retain side effects from function arguments after dropping the function call then use pure_funcs instead

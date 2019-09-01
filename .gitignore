@@ -2,4 +2,5 @@
 psd/
 node_modules/
 dist/
+documentation/
 npm-debug.log

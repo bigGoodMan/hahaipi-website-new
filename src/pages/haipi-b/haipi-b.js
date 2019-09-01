@@ -1,6 +1,6 @@
 import './haipi-b.styl'
 import { getWebType } from '@lib/tools'
-import screenSize from '@lib/screenSize'
+import { screenSize } from '@lib/screenSize'
 screenSize()
 function haipiPhoneDown () {
   let webType = getWebType()

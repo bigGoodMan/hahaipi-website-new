@@ -5,4 +5,4 @@ function screenSize () {
   clinetWidth = clinetWidth > 750 ? 750 : clinetWidth
   html.style.fontSize = clinetWidth / 7.5 + 'px'
 }
-export default screenSize
+export { screenSize }

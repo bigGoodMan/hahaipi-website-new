@@ -1,9 +1,10 @@
 import './index.styl'
 import ChangeScroll from '@lib/changeScroll'
 import { submitContactInfo } from '@api'
-document.querySelectorAll('img').forEach(ele => {
+for (let i = 0; i < document.querySelectorAll('img').length; ++i) {
+  let ele = document.querySelectorAll('img')[i]
   ele.ondragstart = () => false
-})
+}
 $(function () {
   // 滚动操作
   new ChangeScroll({
@@ -16,22 +17,38 @@ $(function () {
     lazyType: 'data-src',
     lazyOffset: 400
   })
-  // 轮播操作
+
   new Swiper('.swiper-container', {
-    // direction: 'vertical', // 垂直切换选项
-    pagination: {
-      el: '.swiper-pagination'
-    },
-    // autoplay: {
-    //   delay: 3000 // 3秒切换一次
-    // },
-    loop: true, // 循环模式选项
-    disableOnInteraction: false
-    // 如果需要分页器
-    // pagination: {
-    //   el: '.swiper-pagination'
-    // }
+    pagination: '.swiper-pagination',
+    loop: true,
+    grabCursor: true,
+    paginationClickable: true
   })
+  // $('.arrow-left').on('click', function(e){
+  //   e.preventDefault()
+  //   mySwiper.swipePrev()
+  // })
+  // $('.arrow-right').on('click', function(e){
+  //   e.preventDefault()
+  //   mySwiper.swipeNext()
+  // })
+
+  // 轮播操作
+  // new Swiper('.swiper-container', {
+  //   // direction: 'vertical', // 垂直切换选项
+  //   pagination: {
+  //     el: '.swiper-pagination'
+  //   },
+  //   // autoplay: {
+  //   //   delay: 3000 // 3秒切换一次
+  //   // },
+  //   loop: true, // 循环模式选项
+  //   disableOnInteraction: false
+  //   // 如果需要分页器
+  //   // pagination: {
+  //   //   el: '.swiper-pagination'
+  //   // }
+  // })
   // 显示二维码
   $('.show-code-hover').hover(function () {
     let jqDomArr = $(this).find('.index-icon-container')

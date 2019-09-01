@@ -29,8 +29,8 @@
 class Animate {
   constructor () {
     // 不能放在该对象下面 否则会报uncaught TypeError: Illegal invocation
-    window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame  || (fn => setTimeout(fn, 17))
-    window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame  || clearTimeout
+    window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || (fn => setTimeout(fn, 17))
+    window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || clearTimeout
   }
   easeOut (startPlace, endPlace, rate, callback = () => {}) {
     if (startPlace === endPlace || typeof startPlace !== 'number') {
@@ -60,5 +60,5 @@ class Animate {
 }
 // let requestAnimationFra = fn => setTimeout(fn, 1000)
 
-export default Animate
+export { Animate }
 // 84.64262026460288 88 0.33573797353971174
