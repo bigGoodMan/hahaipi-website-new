@@ -149,34 +149,32 @@ body
     background no-repeat center / cover
   .index-entrepreneurship-ul
     margin-top pxs(30)
+    margin-left pxs(-15)
     .index-entrepreneurship-list
-      width pxs(588)
-      height pxs(548)
-      padding pxs(72) pxs(57) 0
-      box-sizing border-box
-      box-shadow 0 0 12px 0px rgba(0, 0, 0, 0.15)
+      padding 0 pxs(13)
+      margin-bottom pxs(24)
+      .index-entrepreneurship-list-content
+        padding pxs(80) 0 pxs(60)
+        background-color #ffffff
+        border-radius: pxs(15)
+        box-sizing border-box
+        box-shadow 0 0 12px 0px rgba(0, 0, 0, 0.15)
       .index-entrepreneurship-icon
-        height pxs(250)
+        height pxs(170)
         background-repeat no-repeat
-        background-position center
+        background-position center bottom
         &.index-choice-address
           background-image url('./img/index-choice-address.png')
         &.index-train
           background-image url('./img/index-train.png')
-  .index-entrepreneurship-second-ul
-    margin-top pxs(30)
-    height pxs(475)
-    box-shadow 0 0 3px 0px rgba(0, 0, 0, 0.15)
-    .index-entrepreneurship-list
-      width 50%
-      padding 0 pxs(25)
-      box-sizing border-box
-    .index-entrepreneurship-icon
-      height pxs(214)
-      background-repeat no-repeat
-      background-position center
-      &.index-gift
-        background-image url('./img/index-gift.png')
+        &.index-equipment-service
+          background-image url('./img/index-equipment-service.png')
+        &.index-software-service
+          background-image url('./img/index-software-service.png')
+        &.index-gift
+          background-image url('./img/index-gift.png')
+        &.index-more-service
+          background-image url('./img/index-more-service.png')
 // 其它疑问
 .index-other-questions
   background no-repeat center / cover
@@ -250,6 +248,7 @@ body
         height pxs(220)
       .index-service-center-list
         width 25%
+        line-height: pxs(30)
         span
           margin-top pxs(10)
           &:first-child
