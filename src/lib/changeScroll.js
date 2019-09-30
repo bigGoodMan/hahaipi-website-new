@@ -1,4 +1,4 @@
-import { eventThrottle, getParentsOffsetTop, getWebType } from './tools'
+import { eventThrottle, getParentsOffsetTop } from './tools'
 import { Animate } from './animate'
 class ChangeScroll {
   /**
@@ -9,8 +9,9 @@ class ChangeScroll {
    * @param {*} callback 回调
    */
   constructor ({ idEle, clickClsEle, controlClsEle, lazyEle, lazyType, lazyOffset = 0, scrollTop = 0, scrollBottom = 0, controlDone = () => {}, lazyDone }) {
+    // 标准中顶部滚动是document.documentElement.scrollTop 非标准document.body.scrollTop 以下有兼容赋值等写法
     this.w = idEle ? document.querySelector(idEle) : window
-    this.idEle = idEle ? document.querySelector(idEle) : document.documentElement || document.body
+    this.idEle = idEle ? document.querySelector(idEle) : null
     this.clickClsEle = clickClsEle
     this.scrollTop = scrollTop
     this.scrollBottom = scrollBottom
@@ -23,7 +24,7 @@ class ChangeScroll {
     this.clickClsEleArr = []
     this.scrollFunc = eventThrottle({ callback: this.scrollDeal.bind(this), time: 200 })
     this.w.addEventListener('scroll', this.scrollFunc)
-    this.w.scroll(this.idEle.scrollLeft, this.idEle.scrollTop + 1) // 偏移+1 防止变成0的时候不触发
+    this.w.scroll((document.documentElement.scrollLeft || document.body.scrollLeft) + 1, (document.documentElement.scrollTop || document.body.scrollTop) + 1) // 偏移+1 防止变成0的时候不触发
     this.srollDomFunc()
   }
   // dom处理与记录
@@ -45,8 +46,8 @@ class ChangeScroll {
         let top = getParentsOffsetTop(controlEle, idEle) - scrollTop + scrollBottom
         top = top < 0 ? 0 : top
         // let height = controlEle.offsetHeight
-        let clientHeight = idEle.clientHeight
-        let scrollHeight = idEle.scrollHeight
+        let clientHeight = document.documentElement.clientHeight || document.body.clientHeight
+        let scrollHeight = idEle ? idEle.scrollHeight : document.documentElement.scrollHeight || document.body.scrollHeight
         let bottomScrollTop = scrollHeight - clientHeight
         let originScroll = top > bottomScrollTop ? bottomScrollTop : top // 当offsetTop 超出到底部scrollTop的时候以实际只能滚动底部的scrollTop距离
         // if (typeof window.getComputedStyle(document.body).scrollBehavior === void 0) {
@@ -54,13 +55,13 @@ class ChangeScroll {
         // }
         originScroll = originScroll || 0
         animate.clear()
-        animate.easeOut(idEle.scrollTop || document.body.scrollTop, originScroll, 10, function (val) {
-          let webType = getWebType()
-          if (idEle === document.documentElement && (webType.isIE || webType.isEdge)) {
+        animate.easeOut(idEle ? idEle.scrollTop : document.documentElement.scrollTop || document.body.scrollTop, originScroll, 10, function (val) {
+          if (idEle) {
+            idEle.scrollTop = val
+          } else {
             document.body.scrollTop = val
-            return
+            document.documentElement.scrollTop = val
           }
-          idEle.scrollTop = val
         })
       }
       this.clickClsEleArr.push({
@@ -71,9 +72,9 @@ class ChangeScroll {
   }
   scrollDeal (e) {
     const { lazyEle, lazyOffset, idEle, lazyType, lazyDone } = this
-    const clientHeight = idEle.clientHeight
+    const clientHeight = idEle ? idEle.clientHeight : document.documentElement.clientHeight || document.body.clientHeight
     // const scrollHeight = idEle.scrollHeight
-    const scrollTop = idEle.scrollTop
+    const scrollTop = idEle ? idEle.scrollTop : document.documentElement.scrollTop || document.body.scrollTop
     let lazyDoms = document.querySelectorAll(lazyEle)
     for (let i = 0; i < lazyDoms.length; ++i) {
       let ele = lazyDoms[i]

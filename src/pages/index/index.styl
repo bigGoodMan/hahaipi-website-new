@@ -32,6 +32,7 @@ body
       border-radius pxs(5)
       cursor pointer
       background-image linear-gradient(140deg, #5174f5, #40a5f6)
+      transition: box-shadow 0.2s ease
   .index-form-content
     background-color #ffffff
     border-radius pxs(5)
@@ -83,6 +84,7 @@ body
       border-radius pxs(5)
       cursor pointer
       background-image linear-gradient(140deg, #5174f5, #40a5f6)
+      transition: box-shadow 0.2s ease
       box-shadow 0px 4px 7.6px 0.4px rgba(80, 117, 245, 0.45)
 // banner
 .index-banner
@@ -156,7 +158,7 @@ body
       .index-entrepreneurship-list-content
         padding pxs(80) 0 pxs(60)
         background-color #ffffff
-        border-radius: pxs(15)
+        border-radius pxs(15)
         box-sizing border-box
         box-shadow 0 0 12px 0px rgba(0, 0, 0, 0.15)
       .index-entrepreneurship-icon
@@ -211,12 +213,15 @@ body
     .index-list
       position relative
       width pxs(145)
-      height pxs(189)
       .index-list-container
         position absolute
+        top 0
         left 0
         right 0
-        width 100%
+        bottom 0
+        margin auto
+        width pxs(145)
+        height pxs(189)
         .index-icon-container
           position relative
           width pxs(144)
@@ -248,7 +253,7 @@ body
         height pxs(220)
       .index-service-center-list
         width 25%
-        line-height: pxs(30)
+        line-height pxs(30)
         span
           margin-top pxs(10)
           &:first-child
@@ -297,6 +302,29 @@ body
         z-index 9
     .index-info
       width pxs(400)
+.why
+  display block
+.swiper-pagination
+  position absolute
+  text-align center
+  transition 0.3s opacity
+  transform translate3d(0, 0, 0)
+  z-index 10
+  bottom 10px
+  left 0
+  width 100%
+  .swiper-pagination-switch
+    display inline-block
+    width 10px
+    height 10px
+    border-radius 50%
+    background #999
+    box-shadow 0px 1px 2px #555 inset
+    margin 0 3px
+    cursor pointer
+    &.swiper-active-switch
+      opacity 1
+      background #007aff
 .index
   .index-width-80
     width pxs(80)

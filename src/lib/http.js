@@ -1,5 +1,6 @@
 
-const apiUrl = window.location.href.indexOf('index.php') > 0 ? window.location.href.match(/.*index\.php\//) : 'http://dev.hahaipi.com/play/index.php/'
+const href = window.location.href.split('index.html')[0]
+const apiUrl = ~href.indexOf('play') ? href.split('play')[0] + 'play/index.php/' : 'https://play.hahaipi.com/index.php/'
 const baseUrl = process.env.NODE_ENV === 'development' ? 'http://dev.hahaipi.com/play/index.php/' : apiUrl
 function ajax ({ method = 'post', url, data, dataType = 'json', async = true }) {
   return new Promise((resolve, reject) => $.ajax({

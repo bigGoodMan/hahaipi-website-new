@@ -2,13 +2,13 @@ const path = require('path')
 const webpack = require('webpack')
 const glob = require('glob')
 // 消除冗余的css
-const PurifycssWebpack = require('purifycss-webpack')
+// const PurifycssWebpack = require('purifycss-webpack') // 谨慎使用 它会把html上不出现的css全部干掉
 // const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin') // 很重要的插件生成多页面入口
 const rules = require('./rules.js')
-console.log(path.resolve())
-console.log(path.join())
-console.log(__dirname)
+// console.log(path.resolve())
+// console.log(path.join())
+// console.log(__dirname)
 const devEnv = process.env.NODE_ENV === 'development' // 开发环境
 // 得到入口地址
 function getEntrysFunc (pagePath, type = 'js') {
@@ -97,9 +97,9 @@ module.exports = {
     //   ignore: ['.*']
     // }]),
     // 消除冗余的css代码
-    new PurifycssWebpack({
-      paths: glob.sync(path.join(__dirname, '../src/pages/*/*.html'))
-    }),
+    // new PurifycssWebpack({
+    //   paths: glob.sync(path.join(__dirname, '../src/pages/*/*.html'))
+    // }),
     ...getHtmlsFunc(getEntrysFunc(path.resolve('src/pages/')), common)
   ]
 }

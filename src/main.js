@@ -1,6 +1,6 @@
 import '@assets/css/global.styl'
-import '@assets/css/common.styl'// 低版本浏览器支持，最低支持到IE8
-// require('babel-polyfill')
+import '@assets/css/common.styl'
+// 低版本浏览器支持，最低支持到IE8
 // require('core-js/features/object/define-property')
 // require('core-js/features/object/create')
 // require('core-js/features/object/assign')
@@ -73,6 +73,17 @@ import '@assets/css/common.styl'// 低版本浏览器支持，最低支持到IE8
             fn.call(el, e)
           })
         }
+      }
+    }
+  }
+})();
+(function () {
+  if (!Function.prototype.bind) {
+    // eslint-disable-next-line no-extend-native
+    Function.prototype.bind = function (context, ...arg1) {
+      let self = this
+      return function (...arg2) {
+        self.apply(context, ...arg1, ...arg2)
       }
     }
   }
