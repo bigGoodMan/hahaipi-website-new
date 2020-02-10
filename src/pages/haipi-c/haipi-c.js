@@ -3,7 +3,7 @@ import { screenSize } from '@lib/screenSize'
 import { getWebType } from '@lib/tools'
 screenSize()
 function haipiPhoneDown () {
-  let haipishiguangAndroidDown = 'http://download-hahaipi.oss-cn-hangzhou.aliyuncs.com/happy/3x/haipishiguang_3_3_5_2.apk'
+  let haipishiguangAndroidDown = 'http://download-hahaipi.oss-cn-hangzhou.aliyuncs.com/happy/3x/haipishiguang_3_3_5_3.apk'
   let haipishiguangIOSDown = 'https://itunes.apple.com/cn/app/hai-pi-shi-guang/id1149185654?mt=8'
   let webType = getWebType()
   $('.haipi-phone-down-mask').click(() => {
